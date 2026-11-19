@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Echora — Home</title>
+    <meta name="description" content="Echora home variant two: full-bleed hero slider, discography and press quotes.">
+    <meta name="keywords" content="musician, band, dj, festival, record label, music template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0A0A0F">
+
+    <!-- Favicon -->
+    <link href="favicon.svg" rel="icon" type="image/svg+xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;800&amp;family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600&amp;display=swap">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/icon-fonts/remixicon/remixicon.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Motion is opt-in: without JS (or with reduced motion) content renders as-is -->
+<script src="assets/js/no-fouc.js"></script>
+</head>
+
+<body class="theme-violet">
+    <!-- Outline filter — traces the silhouette of every outlined ("ghost")
+         text on the page. Keep it: the display faces are built from
+         overlapping sub-paths, which a plain text-stroke would expose. -->
+    <svg class="svg-defs" aria-hidden="true" focusable="false">
+        <filter id="echora-outline" color-interpolation-filters="sRGB">
+            <feComponentTransfer in="SourceGraphic" result="solid">
+                <feFuncA type="linear" slope="255"/>
+            </feComponentTransfer>
+            <feMorphology in="solid" operator="erode" radius="1" result="core"/>
+            <feComposite in="solid" in2="core" operator="out" result="rim"/>
+            <feComposite in="rim" in2="SourceGraphic" operator="in"/>
+        </filter>
+    </svg>
+
+
+    <!-- PRELOADER
+    ============================================= -->
+    <div class="preloader">
+        <div class="preloader__curtain">
+            <div class="preloader__panel"></div>
+            <div class="preloader__panel"></div>
+            <div class="preloader__panel"></div>
+            <div class="preloader__panel"></div>
+        </div>
+        <div class="preloader__inner">
+            <div class="preloader__word">Echora</div>
+            <p class="preloader__tagline">Sound in its purest form</p>
+            <div class="preloader__bar"><span class="preloader__bar-fill"></span></div>
+        </div>
+        <div class="preloader__count">00</div>
+    </div>
+
+    <!-- Decorative layers -->
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"><span class="cursor-ring__label"></span></div>
+
+
+    <!-- HEADER
+    ============================================= -->
+    <header class="site-header site-header--center">
+        
+
+        <div class="site-header__inner">
+            <div class="site-header__start">
+                <div class="socials site-header__socials">
+                    <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                </div>
+                
+
+
+                <nav class="nav nav--left" aria-label="Primary">
+                <ul class="nav__list">
+                    <li class="nav__item has-children is-active">
+                        <a href="index.html" class="nav__link">
+                            <span class="nav__link-inner"><span class="nav__link-text" data-text="Home">Home</span></span>
+                            <!-- <i class="ri-arrow-down-s-line"></i> -->
+                        </a>
+                        <!-- <ul class="nav__sub">
+                            <li><a href="index.html">Home 1</a></li>
+                            <li class="is-active"><a href="demo-2.html">Home 2</a></li>
+                            <li><a href="demo-3.html">Home 3</a></li>
+                            <li><a href="demo-4.html">Home 4</a></li>
+                            <li><a href="demo-5.html">Home 5</a></li>
+                            <li><a href="demo-6.html">Home 6</a></li>
+                            <li><a href="demo-7.html">Home 7</a></li>
+                            <li><a href="demo-8.html">Home 8</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="nav__item has-children">
+                        <a href="discography.html" class="nav__link">
+                            <span class="nav__link-inner"><span class="nav__link-text" data-text="Discography">Discography</span></span>
+                            <!-- <i class="ri-arrow-down-s-line"></i> -->
+                        </a>
+                        <ul class="nav__sub">
+                            <li><a href="discography.html">Albums</a></li>
+                            <li><a href="single-album.html">Single Album</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+            <a href="index.html" class="site-logo" aria-label="Echora — home">
+                <span class="site-logo__word">Echora<span class="site-logo__dot">.</span></span>
+            </a>
+            <div class="site-header__end">
+                <nav class="nav nav--right" aria-label="Primary, continued">
+            <ul class="nav__list">
+                <li class="nav__item has-children">
+                    <a href="shop-page.html" class="nav__link">
+                        <span class="nav__link-inner"><span class="nav__link-text" data-text="Shop">Shop</span></span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </a>
+                    <ul class="nav__sub">
+                        <li><a href="shop-page.html">All Products</a></li>
+                        <li><a href="single-product.html">Single Product</a></li>
+                    </ul>
+                </li>
+
+
+                <!-- <li class="nav__item has-children">
+                    <a href="news-page.html" class="nav__link">
+                        <span class="nav__link-inner"><span class="nav__link-text" data-text="News">News</span></span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </a>
+                    <ul class="nav__sub">
+                        <li><a href="news-page.html">All News</a></li>
+                        <li><a href="single-news.html">Single News</a></li>
+                    </ul>
+                </li> -->
+
+
+
+                <li class="nav__item has-children">
+                    <button type="button" class="nav__link">
+                        <span class="nav__link-inner"><span class="nav__link-text" data-text="Pages">Pages</span></span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <ul class="nav__sub">
+                        <li class="has-children">
+                            <a href="events.html">Events<i class="ri-arrow-right-s-line"></i></a>
+                            <ul class="nav__sub nav__sub--flyout">
+                                <li><a href="events.html">All Events</a></li>
+                                <li><a href="single-event.html">Single Event</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        
+                       <!--  <li class="has-children">
+                            <a href="video-gallery.html">Videos<i class="ri-arrow-right-s-line"></i></a>
+                            <ul class="nav__sub nav__sub--flyout">
+                                <li><a href="video-gallery.html">Video Gallery</a></li>
+                                <li><a href="single-video.html">Single Video</a></li>
+                            </ul>
+                        </li> -->
+
+
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </nav>
+
+
+
+
+                <div class="header-actions">
+                <a href="shop-page.html" class="cart-button" aria-label="Cart, 2 items">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="cart-button__count">2</span>
+                </a>
+                <button type="button" class="menu-trigger" data-magnetic="0.25" aria-expanded="false" aria-controls="overlay-menu">
+                    <span class="menu-trigger__label btn__label">Menu</span>
+                    <span class="menu-trigger__bars" aria-hidden="true"><span></span><span></span></span>
+                </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- OVERLAY MENU
+    ============================================= -->
+    <div class="overlay-menu" id="overlay-menu" aria-hidden="true">
+
+        <div class="overlay-menu__inner">
+            <nav class="overlay-nav" aria-label="Fullscreen">
+                <div class="overlay-nav__item">
+                    <a href="index.html" class="overlay-nav__link">
+                        <span class="overlay-nav__index">01</span> Home
+                    </a>
+                    <button type="button" class="overlay-nav__toggle" aria-expanded="false" aria-label="Toggle Home links"><i class="ri-add-line"></i></button>
+                    <div class="overlay-nav__sub"><div>
+
+                        <!-- <ul class="overlay-nav__sub-list">
+                            <li><a href="index.html">Home 1</a></li>
+                            <li class="is-active"><a href="demo-2.html">Home 2</a></li>
+                            <li><a href="demo-3.html">Home 3</a></li>
+                            <li><a href="demo-4.html">Home 4</a></li>
+                            <li><a href="demo-5.html">Home 5</a></li>
+                            <li><a href="demo-6.html">Home 6</a></li>
+                            <li><a href="demo-7.html">Home 7</a></li>
+                            <li><a href="demo-8.html">Home 8</a></li>
+                        </ul> -->
+
+                    </div></div>
+                </div>
+
+                <div class="overlay-nav__item">
+                    <a href="discography.html" class="overlay-nav__link">
+                        <span class="overlay-nav__index">02</span> Discography
+                    </a>
+                    <button type="button" class="overlay-nav__toggle" aria-expanded="false" aria-label="Toggle Discography links"><i class="ri-add-line"></i></button>
+                    <div class="overlay-nav__sub"><div>
+                        <ul class="overlay-nav__sub-list">
+                            <li><a href="discography.html">Albums</a></li>
+                            <li><a href="single-album.html">Single Album</a></li>
+                        </ul>
+                    </div></div>
+                </div>
+
+                <div class="overlay-nav__item">
+                    <a href="shop-page.html" class="overlay-nav__link">
+                        <span class="overlay-nav__index">03</span> Shop
+                    </a>
+                    <button type="button" class="overlay-nav__toggle" aria-expanded="false" aria-label="Toggle Shop links"><i class="ri-add-line"></i></button>
+                    <div class="overlay-nav__sub"><div>
+                        <ul class="overlay-nav__sub-list">
+                            <li><a href="shop-page.html">All Products</a></li>
+                            <li><a href="single-product.html">Single Product</a></li>
+                        </ul>
+                    </div></div>
+                </div>
+
+                <div class="overlay-nav__item">
+                    <a href="news-page.html" class="overlay-nav__link">
+                        <span class="overlay-nav__index">04</span> News
+                    </a>
+                    <button type="button" class="overlay-nav__toggle" aria-expanded="false" aria-label="Toggle News links"><i class="ri-add-line"></i></button>
+                    <div class="overlay-nav__sub"><div>
+                        <ul class="overlay-nav__sub-list">
+                            <li><a href="news-page.html">All News</a></li>
+                            <li><a href="single-news.html">Single News</a></li>
+                        </ul>
+                    </div></div>
+                </div>
+
+                <div class="overlay-nav__item">
+                    <button type="button" class="overlay-nav__link overlay-nav__link--group">
+                        <span class="overlay-nav__index">05</span> Pages
+                    </button>
+                    <button type="button" class="overlay-nav__toggle" aria-expanded="false" aria-label="Toggle Pages links"><i class="ri-add-line"></i></button>
+                    <div class="overlay-nav__sub"><div>
+                        <ul class="overlay-nav__sub-list overlay-nav__sub-list--grouped">
+                            <li class="overlay-nav__group">
+                                <a href="events.html">Events</a>
+                                <ul class="overlay-nav__nested">
+                                    <li><a href="events.html">All Events</a></li>
+                                    <li><a href="single-event.html">Single Event</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li class="overlay-nav__group">
+                                <a href="video-gallery.html">Videos</a>
+                                <ul class="overlay-nav__nested">
+                                    <li><a href="video-gallery.html">Video Gallery</a></li>
+                                    <li><a href="single-video.html">Single Video</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div></div>
+                </div>
+            </nav>
+
+            <aside class="overlay-aside" aria-label="Contact details">
+                <div class="overlay-aside__group">
+                    <span class="label">Bookings</span>
+                    <a href="mailto:hello@echora.com" class="overlay-aside__value">hello@echora.com</a>
+                </div>
+                <div class="overlay-aside__group">
+                    <span class="label">Management</span>
+                    <a href="tel:+15550142200" class="overlay-aside__value">+1 (555) 014 2200</a>
+                </div>
+                <div class="overlay-aside__group">
+                    <span class="label">Studio</span>
+                    <p class="footer-text">218 Rivington Street<br>Brooklyn, NY 11206</p>
+                </div>
+                <div class="overlay-aside__group">
+                    <span class="label">Follow</span>
+                    <div class="socials">
+                        <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                        <a href="#" aria-label="Spotify"><i class="ri-spotify-fill"></i></a>
+                    </div>
+                </div>
+                <div class="overlay-aside__gallery">
+                    <img src="assets/images/gallery-1.jpg" alt="Live show">
+                    <img src="assets/images/gallery-2.jpg" alt="Backstage">
+                    <img src="assets/images/gallery-3.jpg" alt="Studio session">
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+<main id="main">
+
+    <!-- HERO 2
+    ============================================= -->
+    <section class="hero hero-2" data-slider-scope>
+        <div class="hero-2__slider">
+            <div class="swiper" data-slider="hero">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/hero-2.jpg" alt="Nightform"></div>
+                    <div class="swiper-slide"><img src="assets/images/slider-1.jpg" alt="European tour"></div>
+                    <div class="swiper-slide"><img src="assets/images/slider-4.jpg" alt="Live at Apollo"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__inner">
+            <p class="hero__label" data-reveal="up">Brooklyn, New York — Est. 2016</p>
+            <h1 class="hero__title hero-2__caption" data-split="lines" data-split-hero>Sound made <em>loud</em></h1>
+            <p class="hero__text" data-reveal="up" data-delay="0.35">
+                Our new record <strong>Nightform</strong> is out now. Eleven tracks recorded live to tape in one Brooklyn winter.
+            </p>
+            <div class="hero__actions" data-reveal="up" data-delay="0.45">
+                <a href="single-album.html" class="btn btn--solid" data-magnetic="0.3"><span class="btn__label">Listen now <i class="ri-play-fill"></i></span></a>
+                <a href="events.html" class="btn" data-magnetic="0.3"><span class="btn__label">Tour dates</span></a>
+            </div>
+
+            <div class="hero-2__toolbar">
+                <div class="slider-counter">
+                    <span class="slider-counter__current">01</span>
+                    <span class="slider-counter__sep">/</span>
+                    <span class="slider-counter__total">03</span>
+                </div>
+                <div class="swiper-pagination pagination-numbers js-slider-pagination"></div>
+                <div class="slider-nav">
+                    <button type="button" class="btn-circle slider-nav__btn js-slider-prev" aria-label="Previous slide"><i class="ri-arrow-left-line"></i></button>
+                    <button type="button" class="btn-circle slider-nav__btn js-slider-next" aria-label="Next slide"><i class="ri-arrow-right-line"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__rail">
+            <span class="scroll-cue">Scroll</span>
+            <div class="hero__rail-socials">
+                <a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">Spotify</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- DISCOGRAPHY
+    ============================================= -->
+    <section class="section section--glow discography-1" data-slider-scope>
+        <span class="ghost-word" aria-hidden="true">Records</span>
+        <div class="container-echora">
+            <div class="section-head">
+                <div>
+                    <span class="section-label">Discography</span>
+                    <h2 class="section-head__title" data-split="lines">Every <em>record</em> we made</h2>
+                </div>
+                <a href="discography.html" class="link-arrow" data-magnetic="0.2">All albums <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+
+            <div class="swiper swiper--clip" data-slider="disco">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="single-album.html" class="album-card" data-cursor="Listen">
+                            <div class="album-card__cover">
+                                <img src="assets/images/album-1.jpg" alt="Nightform album cover">
+                                <span class="btn-circle btn-circle--solid album-card__play"><i class="ri-play-fill"></i></span>
+                            </div>
+                            <div class="album-card__body">
+                                <div>
+                                    <h3 class="album-card__title">Nightform</h3>
+                                    <span class="album-card__meta">LP · 11 tracks</span>
+                                </div>
+                                <span class="album-card__year">2026</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-album.html" class="album-card" data-cursor="Listen">
+                            <div class="album-card__cover">
+                                <img src="assets/images/album-2.jpg" alt="Static Bloom album cover">
+                                <span class="btn-circle btn-circle--solid album-card__play"><i class="ri-play-fill"></i></span>
+                            </div>
+                            <div class="album-card__body">
+                                <div>
+                                    <h3 class="album-card__title">Static Bloom</h3>
+                                    <span class="album-card__meta">LP · 9 tracks</span>
+                                </div>
+                                <span class="album-card__year">2024</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-album.html" class="album-card" data-cursor="Listen">
+                            <div class="album-card__cover">
+                                <img src="assets/images/album-3.jpg" alt="Paper Cities album cover">
+                                <span class="btn-circle btn-circle--solid album-card__play"><i class="ri-play-fill"></i></span>
+                            </div>
+                            <div class="album-card__body">
+                                <div>
+                                    <h3 class="album-card__title">Paper Cities</h3>
+                                    <span class="album-card__meta">EP · 5 tracks</span>
+                                </div>
+                                <span class="album-card__year">2023</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-album.html" class="album-card" data-cursor="Listen">
+                            <div class="album-card__cover">
+                                <img src="assets/images/album-4.jpg" alt="Low Country album cover">
+                                <span class="btn-circle btn-circle--solid album-card__play"><i class="ri-play-fill"></i></span>
+                            </div>
+                            <div class="album-card__body">
+                                <div>
+                                    <h3 class="album-card__title">Low Country</h3>
+                                    <span class="album-card__meta">LP · 10 tracks</span>
+                                </div>
+                                <span class="album-card__year">2022</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-album.html" class="album-card" data-cursor="Listen">
+                            <div class="album-card__cover">
+                                <img src="assets/images/album-5.jpg" alt="Hollow Season album cover">
+                                <span class="btn-circle btn-circle--solid album-card__play"><i class="ri-play-fill"></i></span>
+                            </div>
+                            <div class="album-card__body">
+                                <div>
+                                    <h3 class="album-card__title">Hollow Season</h3>
+                                    <span class="album-card__meta">EP · 6 tracks</span>
+                                </div>
+                                <span class="album-card__year">2021</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-album.html" class="album-card" data-cursor="Listen">
+                            <div class="album-card__cover">
+                                <img src="assets/images/album-6.jpg" alt="First Light album cover">
+                                <span class="btn-circle btn-circle--solid album-card__play"><i class="ri-play-fill"></i></span>
+                            </div>
+                            <div class="album-card__body">
+                                <div>
+                                    <h3 class="album-card__title">First Light</h3>
+                                    <span class="album-card__meta">LP · 12 tracks</span>
+                                </div>
+                                <span class="album-card__year">2019</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-toolbar">
+                <div class="swiper-pagination pagination-lines js-slider-pagination"></div>
+                <div class="slider-nav">
+                    <button type="button" class="btn-circle slider-nav__btn js-slider-prev" aria-label="Previous"><i class="ri-arrow-left-line"></i></button>
+                    <button type="button" class="btn-circle slider-nav__btn js-slider-next" aria-label="Next"><i class="ri-arrow-right-line"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MEMBERS
+    ============================================= -->
+    <section class="section section--alt members-1" data-slider-scope>
+        <div class="container-echora">
+            <div class="section-head">
+                <div>
+                    <span class="section-label">The band</span>
+                    <h2 class="section-head__title" data-split="lines">Six people, one <em>room</em></h2>
+                </div>
+                <a href="artists.html" class="link-arrow" data-magnetic="0.2">Meet everyone <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+
+            <div class="swiper swiper--clip" data-slider="members">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="single-artist.html" class="member-card" data-cursor="Profile">
+                            <div class="member-card__media"><img src="assets/images/team-1.jpg" alt="Iris Calder"></div>
+                            <span class="member-card__edge">Echora</span>
+                            <div class="member-card__body">
+                                <div>
+                                    <h3 class="member-card__name">Iris Calder</h3>
+                                    <span class="member-card__role">Vocals</span>
+                                </div>
+                                <span class="btn-circle"><i class="ri-arrow-right-up-line"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-artist.html" class="member-card" data-cursor="Profile">
+                            <div class="member-card__media"><img src="assets/images/team-2.jpg" alt="Noah Vance"></div>
+                            <span class="member-card__edge">Echora</span>
+                            <div class="member-card__body">
+                                <div>
+                                    <h3 class="member-card__name">Noah Vance</h3>
+                                    <span class="member-card__role">Guitar</span>
+                                </div>
+                                <span class="btn-circle"><i class="ri-arrow-right-up-line"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-artist.html" class="member-card" data-cursor="Profile">
+                            <div class="member-card__media"><img src="assets/images/team-3.jpg" alt="Mara Ellis"></div>
+                            <span class="member-card__edge">Echora</span>
+                            <div class="member-card__body">
+                                <div>
+                                    <h3 class="member-card__name">Mara Ellis</h3>
+                                    <span class="member-card__role">Bass</span>
+                                </div>
+                                <span class="btn-circle"><i class="ri-arrow-right-up-line"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-artist.html" class="member-card" data-cursor="Profile">
+                            <div class="member-card__media"><img src="assets/images/team-4.jpg" alt="Theo Ruiz"></div>
+                            <span class="member-card__edge">Echora</span>
+                            <div class="member-card__body">
+                                <div>
+                                    <h3 class="member-card__name">Theo Ruiz</h3>
+                                    <span class="member-card__role">Drums</span>
+                                </div>
+                                <span class="btn-circle"><i class="ri-arrow-right-up-line"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-artist.html" class="member-card" data-cursor="Profile">
+                            <div class="member-card__media"><img src="assets/images/team-5.jpg" alt="June Park"></div>
+                            <span class="member-card__edge">Echora</span>
+                            <div class="member-card__body">
+                                <div>
+                                    <h3 class="member-card__name">June Park</h3>
+                                    <span class="member-card__role">Keys</span>
+                                </div>
+                                <span class="btn-circle"><i class="ri-arrow-right-up-line"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="single-artist.html" class="member-card" data-cursor="Profile">
+                            <div class="member-card__media"><img src="assets/images/team-6.jpg" alt="Sam Okafor"></div>
+                            <span class="member-card__edge">Echora</span>
+                            <div class="member-card__body">
+                                <div>
+                                    <h3 class="member-card__name">Sam Okafor</h3>
+                                    <span class="member-card__role">Synths</span>
+                                </div>
+                                <span class="btn-circle"><i class="ri-arrow-right-up-line"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-toolbar">
+                <div class="swiper-pagination pagination-lines js-slider-pagination"></div>
+                <div class="slider-nav">
+                    <button type="button" class="btn-circle slider-nav__btn js-slider-prev" aria-label="Previous"><i class="ri-arrow-left-line"></i></button>
+                    <button type="button" class="btn-circle slider-nav__btn js-slider-next" aria-label="Next"><i class="ri-arrow-right-line"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- COMMENTS
+    ============================================= -->
+    <section class="section testimonials" data-slider-scope>
+        <div class="container-echora">
+            <div class="testimonials__inner">
+                <span class="testimonials__mark" aria-hidden="true">&ldquo;</span>
+                <span class="section-label justify-center">What the press says</span>
+
+                <div class="swiper" data-slider="testimonial">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="testimonial">
+                                <div class="testimonial__stars" aria-label="Five stars" role="img"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                <blockquote class="testimonial__quote">A band that understands silence as well as volume — Nightform is the year&rsquo;s most assured rock record.</blockquote>
+                                <figcaption class="testimonial__author">
+                                    <span class="testimonial__avatar"><img src="assets/images/team-5.jpg" alt=""></span>
+                                    <span class="testimonial__meta">
+                                        <span class="testimonial__name">Elena Marsh</span>
+                                        <span class="testimonial__source">Pitchfork</span>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="testimonial">
+                                <div class="testimonial__stars" aria-label="Five stars" role="img"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                <blockquote class="testimonial__quote">Live, they are overwhelming in the best way. Ninety minutes that felt like fifteen.</blockquote>
+                                <figcaption class="testimonial__author">
+                                    <span class="testimonial__avatar"><img src="assets/images/team-2.jpg" alt=""></span>
+                                    <span class="testimonial__meta">
+                                        <span class="testimonial__name">Daniel Okonjo</span>
+                                        <span class="testimonial__source">NME</span>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="testimonial">
+                                <div class="testimonial__stars" aria-label="Five stars" role="img"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                <blockquote class="testimonial__quote">Echora have quietly become one of the most important guitar bands working today.</blockquote>
+                                <figcaption class="testimonial__author">
+                                    <span class="testimonial__avatar"><img src="assets/images/team-3.jpg" alt=""></span>
+                                    <span class="testimonial__meta">
+                                        <span class="testimonial__name">Sofia Lindqvist</span>
+                                        <span class="testimonial__source">The Quietus</span>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-toolbar">
+                    <div class="slider-nav">
+                        <button type="button" class="btn-circle slider-nav__btn js-slider-prev" aria-label="Previous"><i class="ri-arrow-left-line"></i></button>
+                        <button type="button" class="btn-circle slider-nav__btn js-slider-next" aria-label="Next"><i class="ri-arrow-right-line"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LATEST NEWS
+    ============================================= -->
+    <section class="section">
+        <div class="container-echora">
+            <div class="section-head">
+                <div>
+                    <span class="section-label">Latest news</span>
+                    <h2 class="section-head__title" data-split="lines">From the <em>journal</em></h2>
+                </div>
+                <a href="news-page.html" class="link-arrow" data-magnetic="0.2">All news <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+            <div class="news-grid" data-reveal-group data-stagger="0.1">
+                        <article class="media-card news-card">
+                            <a href="single-news.html" class="media-card__media" data-cursor="Read">
+                                <img src="assets/images/news-1.jpg" alt="Nightform is out everywhere today">
+                                <span class="card-icon"><i class="ri-arrow-right-up-line"></i></span>
+                            </a>
+                            <div class="media-card__body">
+                                <div class="media-card__meta">
+                                    <span class="news-card__category">Releases</span>
+                                    <span class="divider-dot"></span>
+                                    <span class="news-card__date">May 02, 2026</span>
+                                </div>
+                                <h3 class="media-card__title"><a href="single-news.html">Nightform is out everywhere today</a></h3>
+                                <p class="media-card__excerpt">Eleven tracks recorded over one winter in a converted Brooklyn warehouse — our most direct record yet.</p>
+                            </div>
+                        </article>
+                        <article class="media-card news-card">
+                            <a href="single-news.html" class="media-card__media" data-cursor="Read">
+                                <img src="assets/images/news-2.jpg" alt="Announcing the 2026 European tour">
+                                <span class="card-icon"><i class="ri-arrow-right-up-line"></i></span>
+                            </a>
+                            <div class="media-card__body">
+                                <div class="media-card__meta">
+                                    <span class="news-card__category">Tour</span>
+                                    <span class="divider-dot"></span>
+                                    <span class="news-card__date">April 18, 2026</span>
+                                </div>
+                                <h3 class="media-card__title"><a href="single-news.html">Announcing the 2026 European tour</a></h3>
+                                <p class="media-card__excerpt">Fourteen countries, twenty-two rooms. Presale opens Friday for newsletter subscribers.</p>
+                            </div>
+                        </article>
+                        <article class="media-card news-card">
+                            <a href="single-news.html" class="media-card__media" data-cursor="Read">
+                                <img src="assets/images/news-3.jpg" alt="Inside the Nightform sessions">
+                                <span class="card-icon"><i class="ri-arrow-right-up-line"></i></span>
+                            </a>
+                            <div class="media-card__body">
+                                <div class="media-card__meta">
+                                    <span class="news-card__category">Studio</span>
+                                    <span class="divider-dot"></span>
+                                    <span class="news-card__date">March 27, 2026</span>
+                                </div>
+                                <h3 class="media-card__title"><a href="single-news.html">Inside the Nightform sessions</a></h3>
+                                <p class="media-card__excerpt">Tape machines, a borrowed Juno and a room that refused to stay quiet. A look behind the record.</p>
+                            </div>
+                        </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER
+    ============================================= -->
+    <footer class="site-footer">
+        <div class="site-footer__bg" aria-hidden="true">
+            <img src="assets/images/footer-image.jpg" alt="">
+        </div>
+        <div class="site-footer__glow" aria-hidden="true"></div>
+
+        <div class="container-echora">
+            <div class="footer-marquee marquee" data-velocity>
+                <div class="marquee__track">
+                    <span class="marquee__item">Echora <span class="marquee__sep">✦</span> On tour 2026 <span class="marquee__sep">✦</span> Nightform out now <span class="marquee__sep">✦</span></span>
+                    <span class="marquee__item marquee__item--ghost">Echora <span class="marquee__sep">✦</span> On tour 2026 <span class="marquee__sep">✦</span> Nightform out now <span class="marquee__sep">✦</span></span>
+                    <span class="marquee__item" aria-hidden="true">Echora <span class="marquee__sep">✦</span> On tour 2026 <span class="marquee__sep">✦</span> Nightform out now <span class="marquee__sep">✦</span></span>
+                    <span class="marquee__item marquee__item--ghost" aria-hidden="true">Echora <span class="marquee__sep">✦</span> On tour 2026 <span class="marquee__sep">✦</span> Nightform out now <span class="marquee__sep">✦</span></span>
+                </div>
+            </div>
+
+            <div class="footer-cta">
+                <h2 class="footer-cta__title" data-split="lines">Let&rsquo;s make something <em>loud</em></h2>
+                <a href="mailto:hello@echora.com" class="btn btn--solid btn--lg" data-magnetic="0.3"><span class="btn__label">hello@echora.com <i class="ri-arrow-right-up-line"></i></span></a>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="site-logo"><span class="site-logo__word">Echora<span class="site-logo__dot">.</span></span></a>
+                    <p class="footer-text">A five-piece from Brooklyn making records that sound better loud. Booking and press enquiries welcome.</p>
+                    <div class="socials">
+                        <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                        <a href="#" aria-label="Spotify"><i class="ri-spotify-fill"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-col__title">Explore</h3>
+                    <div class="footer-links">
+                        <a href="discography.html">Discography</a>
+                        <a href="events.html">Events</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="video-gallery.html">Videos</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-col__title">More</h3>
+                    <div class="footer-links">
+                        <a href="shop-page.html">Shop</a>
+                        <a href="news-page.html">News</a>
+                        <a href="artists.html">Artists</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-col__title">Newsletter</h3>
+                    <p class="footer-text">Tour dates and releases, no noise.</p>
+                    <form class="form-inline footer-newsletter" data-stub-form data-success-message="You're on the list — see you at the next show.">
+                        <input type="email" name="email" placeholder="Your email" aria-label="Your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="ri-arrow-right-line"></i></button>
+                    </form>
+                    <p class="form-message"></p>
+                </div>
+            </div>
+
+            <div class="footer-wordmark-wrap">
+                <a href="index.html" class="footer-wordmark" aria-hidden="true" tabindex="-1">Echora</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 saddamdidar — All rights reserved.</p>
+                <div class="footer-bottom__links">
+                    <a href="typography.html">Typography</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Licence</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</main>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+    <script src="assets/js/vendor/SplitText.min.js"></script>
+    <script src="assets/js/vendor/lenis.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
